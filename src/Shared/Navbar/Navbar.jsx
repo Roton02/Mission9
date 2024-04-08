@@ -34,14 +34,14 @@ const Navbar = () => {
       <NavLink to='/Blog' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white">Blogs</NavLink>
           </div>
         </div>
-        <Link to='/' className="btn btn-ghost text-xl lg:text-3xl mr-0 font-bold">RELUXURY-LANDS</Link>
+        <Link to='/' className="btn btn-ghost text-xl lg:text-3xl mr-0 font-bold">RELAINS-LANDS</Link>
       </div>
       <div className="navbar-center hidden space-x-2  lg:flex">
       <NavLink to='/' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white ">Home</NavLink>
       <NavLink to='/profile' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white">Profile</NavLink>
       <NavLink to='/updateProfile' className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white">Update-Profile</NavLink>
       <div className="pl-7 space-x-2">
-      <NavLink to='/blog' className="btn btn-ghost border-2  border-gray-300 hover:bg-black hover:text-white">Extra</NavLink>
+      <NavLink to='/blog' className="btn btn-ghost border-2  border-gray-300 hover:bg-black hover:text-white">Blogs</NavLink>
       </div>
      
       </div>

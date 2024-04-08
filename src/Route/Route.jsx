@@ -8,16 +8,19 @@ import UpdateProfile from "../page/UpdateProfile/UpdateProfile";
 import Blog from "../page/Blog/Blog";
 import Login from "../page/Login/Login";
 import Register from "../page/Register/Register";
+import ErrorPage from "../page/ErrorePage/ErrorPage";
+import DetailsPage from "../page/DetailsPage/DetailsPage";
 
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Root></Root>,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [
         {
           path: '/',
           element: <Home></Home>,
-          loader: ()=> fetch('/Lands.json')
+          loader: ()=> fetch('Lands.json')
         },
         {
           path : '/profile',
@@ -38,6 +41,10 @@ import Register from "../page/Register/Register";
         {
           path:'/register',
           element: <Register></Register>
+        },
+        {
+          path: '/ShowDetails',
+          element: <DetailsPage></DetailsPage>
         }
       ]
     },

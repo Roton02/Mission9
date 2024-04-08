@@ -5,11 +5,11 @@
       "segment_name": "Farm",
       "description": "A picturesque farm nestled in the countryside, perfect for organic agriculture or hobby farming. Features rolling hills, fertile soil, and a charming farmhouse.",
       "price": "$500,000",
-      "status": "sale",
-      "area": "20 acres",
+      "status": "rent",
+      "area": "2000 sq ft",
       "location": "Rural Valley, California",
       "facilities": ["farmhouse", "barn", "irrigation system"],
-      "image": "green_acres_farm.jpg",
+      "image": "https://i.ibb.co/fqCKd37/c1.jpg",
       "View Property": "green_acres_farm_url"
     },
     {
@@ -19,10 +19,10 @@
       "description": "A prestigious vineyard estate boasting rows of lush grapevines set against a backdrop of rolling hills. Ideal for wine production and hosting events.",
       "price": "$2,000,000",
       "status": "sale",
-      "area": "50 acres",
+      "area": "3700 sq ft",
       "location": "Napa Valley, California",
       "facilities": ["winery", "tasting room", "guest cottages"],
-      "image": "sunset_vineyard_estate.jpg",
+      "image": "https://i.ibb.co/tByWJ7K/c2.jpg",
       "View Property": "sunset_vineyard_estate_url"
     },
     {
@@ -32,10 +32,10 @@
       "description": "An expansive ranch set amidst rugged mountains, offering stunning views and endless recreational opportunities. Perfect for cattle ranching or a private getaway.",
       "price": "$1,800,000",
       "status": "sale",
-      "area": "500 acres",
+      "area": "5000 sq ft",
       "location": "Rocky Mountains, Colorado",
       "facilities": ["main lodge", "horse stables", "trails"],
-      "image": "mountain_retreat_ranch.jpg",
+      "image": "https://i.ibb.co/vBXR8h9/c3.jpg",
       "View Property": "mountain_retreat_ranch_url"
     },
     {
@@ -45,10 +45,10 @@
       "description": "A lush tropical plantation with a variety of fruit trees and exotic crops. Offers a serene escape with endless possibilities for agricultural ventures.",
       "price": "$1,500,000",
       "status": "sale",
-      "area": "100 acres",
+      "area": "3200 sq ft",
       "location": "Hawaii, USA",
       "facilities": ["plantation house", "orchards", "pond"],
-      "image": "tropical_plantation_paradise.jpg",
+      "image": "https://i.ibb.co/QFJPfvB/c4.jpg",
       "View Property": "tropical_plantation_paradise_url"
     },
     {
@@ -57,11 +57,11 @@
       "segment_name": "Forest",
       "description": "A vast expanse of old-growth forest teeming with diverse flora and fauna. Perfect for conservation efforts, eco-tourism, or sustainable timber harvesting.",
       "price": "$3,500,000",
-      "status": "sale",
-      "area": "1000 acres",
+      "status": "rent",
+      "area": "1600 sq ft",
       "location": "Pacific Northwest, USA",
       "facilities": ["nature trails", "wildlife observation points", "camping areas"],
-      "image": "evergreen_forest_reserve.jpg",
+      "image": "https://i.ibb.co/NNLzGdq/c5.jpg",
       "View Property": "evergreen_forest_reserve_url"
     },
     {
@@ -71,10 +71,10 @@
       "description": "Expansive fields of golden wheat stretching as far as the eye can see. Ideal for large-scale agriculture or conversion to alternative crops.",
       "price": "$2,200,000",
       "status": "sale",
-      "area": "800 acres",
+      "area": "6600  sq ft",
       "location": "Great Plains, USA",
       "facilities": ["farmhouse", "grain silos", "irrigation system"],
-      "image": "golden_wheat_fields.jpg",
+      "image": "https://i.ibb.co/1bSrmFk/c6.jpg",
       "View Property": "golden_wheat_fields_url"
     },
     {
@@ -84,10 +84,10 @@
       "description": "Tranquil groves of olive trees lining the banks of a winding river. Offers the perfect setting for olive oil production and agritourism.",
       "price": "$1,700,000",
       "status": "sale",
-      "area": "50 acres",
+      "area": "7000 sq ft",
       "location": "Tuscany, Italy",
       "facilities": ["processing facility", "tasting room", "scenic picnic areas"],
-      "image": "riverside_olive_grove.jpg",
+      "image": "https://i.ibb.co/GpX33wB/c7.jpg",
       "View Property": "riverside_olive_grove_url"
     },
     {
@@ -97,10 +97,10 @@
       "description": "A rugged Highland landscape dotted with grazing cattle and pristine lochs. Offers the quintessential Scottish ranching experience.",
       "price": "$2,800,000",
       "status": "sale",
-      "area": "600 acres",
+      "area": "4100 sq ft",
       "location": "Scottish Highlands, UK",
       "facilities": ["rustic lodges", "cattle pens", "fishing rights"],
-      "image": "highland_cattle_ranch.jpg",
+      "image": "https://i.ibb.co/y5z54XR/c8R.jpg",
       "View Property": "highland_cattle_ranch_url"
     },
     {
@@ -110,10 +110,10 @@
       "description": "A majestic château surrounded by meticulously manicured vineyards. Epitomizes luxury winemaking and French countryside living.",
       "price": "$5,000,000",
       "status": "sale",
-      "area": "200 acres",
+      "area": "5240 sq ft",
       "location": "Bordeaux, France",
       "facilities": ["château", "wine cellars", "helipad"],
-      "image": "chateau_winery_estate.jpg",
+      "image": "https://i.ibb.co/b515267/c9.jpg",
       "View Property": "chateau_winery_estate_url"
     }
   ]

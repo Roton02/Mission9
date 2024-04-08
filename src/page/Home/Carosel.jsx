@@ -18,7 +18,7 @@ const Carosel = () => {
     progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
   return (
-    <div className=' my-2 lg:my-4 min-h-screen rounded-xl '>
+    <div className=' my-2 lg:my-4 lg:min-h-screen rounded-xl '>
         <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -39,7 +39,7 @@ const Carosel = () => {
                 <img className='w-[1280px] bg-cover rounded-xl' src={slide2} alt="" />
         </SwiperSlide>
         <SwiperSlide>       
-                <img className='w-[1280px] bg-cover rounded-xl' src={slide4} alt="" />
+                <img className='w-[1280px] bg-cover rounded-xl' src='https://i.ibb.co/gW91Vqz/istockphoto-1703522523-612x612.jpg' alt="" />
         </SwiperSlide>
         <SwiperSlide>       
                 <img className='w-[1280px] bg-cover rounded-xl' src={slide1} alt="" />
