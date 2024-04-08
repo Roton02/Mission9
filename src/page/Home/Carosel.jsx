@@ -39,7 +39,7 @@ const Carosel = () => {
                 <img className='w-[1280px] bg-cover rounded-xl' src={slide2} alt="" />
         </SwiperSlide>
         <SwiperSlide>       
-                <img className='w-[1280px] bg-cover rounded-xl' src='https://i.ibb.co/gW91Vqz/istockphoto-1703522523-612x612.jpg' alt="" />
+                <img className='w-[1280px] bg-cover rounded-xl' src={slide4} alt="" />
         </SwiperSlide>
         <SwiperSlide>       
                 <img className='w-[1280px] bg-cover rounded-xl' src={slide1} alt="" />

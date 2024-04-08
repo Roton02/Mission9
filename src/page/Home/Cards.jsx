@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../ContextProvider/ContextProvider";
 const Cards = ({ data }) => {
-  const { setViewLand} = useContext(AuthContext)
+  const { setViewLand,user} = useContext(AuthContext)
   // console.log(setViewLand);
   const {estate_title,price,status,area,location,image} = data;
 

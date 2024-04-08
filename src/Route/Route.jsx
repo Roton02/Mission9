@@ -10,6 +10,7 @@ import Login from "../page/Login/Login";
 import Register from "../page/Register/Register";
 import ErrorPage from "../page/ErrorePage/ErrorPage";
 import DetailsPage from "../page/DetailsPage/DetailsPage";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
   const router = createBrowserRouter([
     {
@@ -44,7 +45,9 @@ import DetailsPage from "../page/DetailsPage/DetailsPage";
         },
         {
           path: '/ShowDetails',
-          element: <DetailsPage></DetailsPage>
+          element: <PrivateRoute> 
+              <DetailsPage></DetailsPage>
+          </PrivateRoute> 
         }
       ]
     },
