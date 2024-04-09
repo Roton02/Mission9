@@ -40,7 +40,7 @@ const ContextProvider = ({children}) => {
              setUser(currentUser);
              setLoading(false)
            } else{
-           //    console.log('logOut Successfull');
+              console.log('logOut Successfull');
            setUser(null)
            }
            return ()=>{
@@ -49,7 +49,7 @@ const ContextProvider = ({children}) => {
          });
      },[])
 
-const info = {setViewLand,viewLand, user, googleSignIn,githubSignIn, signUp,login,Logout,loading}
+const info = {setViewLand,viewLand,  user, googleSignIn,githubSignIn, signUp,login,Logout,loading}
     return (
         <AuthContext.Provider value={info}>
             {
