@@ -48,12 +48,14 @@ const Navbar = () => {
             >
               Update-Profile
             </NavLink>
-            <NavLink
-              to="/Blog"
-              className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white"
-            >
-              Blogs
-            </NavLink>
+            {
+            user && <NavLink
+            to="/blog"
+            className="btn btn-ghost border-2  border-gray-300 hover:bg-black hover:text-white"
+          >
+            Blogs
+          </NavLink>
+          }
           </div>
         </div>
         <Link
@@ -83,12 +85,14 @@ const Navbar = () => {
           Update-Profile
         </NavLink>
         
-          <NavLink
+          {
+            user && <NavLink
             to="/blog"
             className="btn btn-ghost border-2  border-gray-300 hover:bg-black hover:text-white"
           >
             Blogs
           </NavLink>
+          }
        
       </div>
       <div className="navbar-end ">

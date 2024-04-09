@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../../ContextProvider/ContextProvider";
 
@@ -9,8 +9,10 @@ const Login = () => {
   console.log(location);
 
   // console.log(name);
+  const [error , setError] = useState(null)
   const handleSubmitLogin = (e) => {
     e.preventDefault();
+    e.target.reset();
     const email = e.target.email.value;
     const password = e.target.password.value;
     //  console.log(email,password);
@@ -20,7 +22,7 @@ const Login = () => {
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
-        console.log(error);
+        setError(error.message)
       });
     // console.log(user);
   };
@@ -30,7 +32,7 @@ const Login = () => {
         console.log(result.user);
       })
       .catch((error) => {
-        console.log(error);
+        setError(error.message)
       });
   };
   const handleSigninWithGithub = () => {
@@ -39,7 +41,7 @@ const Login = () => {
         console.log(result.user);
       })
       .catch((error) => {
-        console.log(error);
+        setError(error.message);
       });
   };
 
@@ -77,6 +79,9 @@ const Login = () => {
                 placeholder="*****"
                 className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800"
               />
+              {
+                error && <p>{error.split('/')[1].split(')')[0]}</p> 
+              }
             </div>
           </div>
           <div className="space-y-2">

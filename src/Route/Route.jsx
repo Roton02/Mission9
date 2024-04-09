@@ -25,11 +25,15 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
         },
         {
           path : '/profile',
-          element: <Profile></Profile>
+          element: <PrivateRoute>
+              <Profile></Profile>
+          </PrivateRoute> 
         },
         {
           path : '/updateProfile',
-          element: <UpdateProfile></UpdateProfile>
+          element: <PrivateRoute>
+              <UpdateProfile></UpdateProfile>
+          </PrivateRoute> 
         },
         {
           path: '/blog',

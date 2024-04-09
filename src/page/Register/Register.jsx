@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../ContextProvider/ContextProvider";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 
 const Register = () => {
+  const [error, setError] = useState(null)
   const { signUp, googleSignIn, githubSignIn } = useContext(AuthContext);
   const handleSubmitRegister = (e) => {
     e.preventDefault();
@@ -16,7 +17,7 @@ const Register = () => {
         console.log(result.user);
       })
       .catch((error) => {
-        console.log(error);
+        setError(error.message);
       });
   };
   const handleSigninWithGoogle = () => {
@@ -25,7 +26,7 @@ const Register = () => {
         console.log(result.user);
       })
       .catch((error) => {
-        console.log(error);
+        setError(error.message);
       });
   };
   const handleSigninWithGithub = () => {
@@ -34,7 +35,7 @@ const Register = () => {
         console.log(result.user);
       })
       .catch((error) => {
-        console.log(error);
+        setError(error.message);
       });
   };
 
@@ -100,6 +101,9 @@ const Register = () => {
                 className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800"
               />
             </div>
+            {
+              error && <p>{error}</p> 
+            }
           </div>
           <div className="space-y-2">
             <div>
