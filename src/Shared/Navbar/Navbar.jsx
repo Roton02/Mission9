@@ -62,7 +62,7 @@ const Navbar = () => {
           to="/"
           className="btn btn-ghost text-xl lg:text-3xl mr-0 font-bold"
         >
-          RELAINS-LANDS
+          <span className="text-pink-700">RELAINS</span> RELUX
         </Link>
       </div>
       <div className="navbar-center hidden space-x-2  lg:flex">
@@ -106,10 +106,10 @@ const Navbar = () => {
          </div>
           <button
             onClick={Logout}
-            className="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-[#ad1199] text-[#ad1199] hover:text-white"
+            className="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-pink-700 text-pink-700 hover:text-white"
           >
-            <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-[#ad1199] top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
-            <span className="relative text-[#ad1199] transition duration-300 group-hover:text-white ease">
+            <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-pink-700 top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
+            <span className="relative text-pink-700 transition duration-300 group-hover:text-white ease">
               Logout
             </span>
           </button>

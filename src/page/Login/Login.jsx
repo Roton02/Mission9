@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../../ContextProvider/ContextProvider";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -47,6 +48,10 @@ const Login = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Login</title>
+        {/* <link rel="canonical" href="https://www.tacobell.com/" /> */}
+      </Helmet>
       <div className="flex flex-col max-w-md mx-auto border-2 bg-base-200 p-6 rounded-md sm:p-10 dark:bg-gray-50 dark:text-gray-800">
         <div className="mb-8 text-center">
           <h1 className="my-3 text-4xl font-bold">Login</h1>

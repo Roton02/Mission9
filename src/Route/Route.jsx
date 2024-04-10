@@ -21,7 +21,7 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
         {
           path: '/',
           element: <Home></Home>,
-          loader: ()=> fetch('Lands.json')
+          loader: ()=> fetch('Properties.json')
         },
         {
           path : '/profile',

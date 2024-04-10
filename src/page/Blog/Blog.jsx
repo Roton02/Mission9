@@ -1,3 +1,5 @@
+import { Helmet } from "react-helmet-async";
+
 const Blog = () => {
   return (
     <section className="dark:bg-gray-100 dark:text-gray-800">
@@ -8,22 +10,19 @@ const Blog = () => {
           className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-50"
         >
           <img
-            src="https://i.ibb.co/hcTRWTC/b10.jpg"
+            src="https://i.ibb.co/vL8L69Y/blog10.jpg"
             alt=""
             className="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500"
           />
           <div className="p-6 space-y-2 lg:col-span-5">
             <h3 className="text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline">
-              10 Tips for Starting Your Own Vineyard
+            Tropical Paradise Resort
             </h3>
             <span className="text-xs dark:text-gray-600">
               February 19, 2021
             </span>
             <p>
-              Sustainable farming practices are becoming increasingly important
-              in the face of climate change, environmental degradation, and food
-              security concerns.ei probatus consulatu patrioque mea, ei
-                vocent delicata indoctum pri.
+            Escape to this idyllic resort nestled along the pristine beaches of the Caribbean. Enjoy luxurious accommodations, beachfront access, infinity pool, spa treatments, and fine dining.
             </p>
           </div>
         </a>
@@ -36,19 +35,17 @@ const Blog = () => {
             <img
               role="presentation"
               className="object-cover w-full rounded h-44 dark:bg-gray-500"
-              src="https://i.ibb.co/jfG9g6B/b1.webp"
+              src="https://i.ibb.co/nBb3zF6/blog2.jpg"
             />
             <div className="p-6 space-y-2">
               <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
-                Exploring Sustainable Farming Practices
+              Mountain Retreat Resort
               </h3>
               <span className="text-xs dark:text-gray-600">
                 January 21, 2021
               </span>
               <p>
-                Mei ex aliquid eleifend forensibus, quo ad dicta apeirian
-                neglegentur, ex has tantas percipit perfecto. At per tempor
-                albucius perfecto, 
+              Experience the ultimate mountain getaway in the heart of the Swiss Alps. Ski-in/ski-out access, hot tubs, gourmet restaurants, and a fitness center await you amidst breathtaking alpine scenery.
               </p>
             </div>
           </a>
@@ -60,18 +57,17 @@ const Blog = () => {
             <img
               role="presentation"
               className="object-cover w-full rounded h-44 dark:bg-gray-500"
-              src="https://i.ibb.co/BGxnCr2/b2.webp"
+              src="https://i.ibb.co/9b48bb5/blog3.jpg"
             />
             <div className="p-6 space-y-2">
               <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
-                Preserving Old-Growth Forests: A Conservation Effort
+              Luxury Safari Lodge
               </h3>
               <span className="text-xs dark:text-gray-600">
                 January 22, 2021
               </span>
               <p>
-                By adopting sustainable farming techniques, farmers can minimize
-                their environmental impact, 
+              Embark on a journey of luxury and adventure at this exquisite safari lodge in the renowned Maasai Mara. Enjoy guided safari tours, luxury tents, private chef services, and unforgettable wildlife viewing.
               </p>
             </div>
           </a>
@@ -83,19 +79,17 @@ const Blog = () => {
             <img
               role="presentation"
               className="object-cover w-full rounded h-44 dark:bg-gray-500"
-              src="https://i.ibb.co/khRg0C1/b3.webp"
+              src="https://i.ibb.co/DDGhY9h/blog4.jpg"
             />
             <div className="p-6 space-y-2">
               <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
-                Ranching 101: Introduction to Cattle Ranching
+              Seaside Penthouse
               </h3>
               <span className="text-xs dark:text-gray-600">
                 January 23, 2021
               </span>
               <p>
-                Crop Rotation: Crop rotation is a fundamental sustainable
-                farming practice that involves alternating the types of crops
-                grown in a particular.
+              Indulge in lavish seaside living at this stunning penthouse overlooking the turquoise waters of Miami Beach. Features include an oceanfront balcony, private elevator, infinity pool, and designer furnishings.
               </p>
             </div>
           </a>
@@ -107,19 +101,17 @@ const Blog = () => {
             <img
               role="presentation"
               className="object-cover w-full rounded h-44 dark:bg-gray-500"
-              src="https://i.ibb.co/HV4nTHk/b4.jpg"
+              src="https://i.ibb.co/DY91zzq/blog6.jpg"
             />
             <div className="p-6 space-y-2">
               <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
-                The Art of Olive Oil Production: From Grove to Bottle
+              Luxury Loft Penthouse
               </h3>
               <span className="text-xs dark:text-gray-600">
                 January 24, 2021
               </span>
               <p>
-                reduce pest and disease pressure, and minimize the need for
-                synthetic fertilizers and pesticides.\n\n2. Cover Cropping:
-                Cover cropping involves .
+              Immerse yourself in the romance of Paris from this luxurious loft penthouse with unparalleled views of the iconic Eiffel Tower. Enjoy a Jacuzzi, personal chef, and dedicated butler service in this opulent retreat
               </p>
             </div>
           </a>
@@ -131,19 +123,17 @@ const Blog = () => {
             <img
               role="presentation"
               className="object-cover w-full rounded h-44 dark:bg-gray-500"
-              src="https://i.ibb.co/5xkK6LV/b5.jpg"
+              src="https://i.ibb.co/cwVr5rR/blog5.jpg"
             />
             <div className="p-6 space-y-2">
               <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
-                Tips for Maintaining a Healthy Farm Ecosystem
+              Exotic Island Retreat
               </h3>
               <span className="text-xs dark:text-gray-600">
                 January 25, 2021
               </span>
               <p>
-                Cover crops help prevent soil erosion, suppress weed growth, and
-                enhance soil health by adding organic matter and fixing
-                nitrogen.
+              Discover the epitome of luxury and seclusion on this exotic private island in Bora Bora. Featuring overwater bungalows, a private beach, helicopter pad, and an array of marine activities, this retreat offers unparalleled privacy and indulgence.
               </p>
             </div>
           </a>
@@ -155,19 +145,17 @@ const Blog = () => {
             <img
               role="presentation"
               className="object-cover w-full rounded h-44 dark:bg-gray-500"
-              src="https://i.ibb.co/BLvpT6F/b6.jpg"
+              src="https://i.ibb.co/rwV8rd7/blog7.jpg"
             />
             <div className="p-6 space-y-2">
               <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
-                The Magic of Coffee Plantations: From Bean to Brew
+              Secluded Island Haven
               </h3>
               <span className="text-xs dark:text-gray-600">
                 January 26, 2021
               </span>
               <p>
-                such as no-till or reduced tillage, minimize soil disturbance
-                and maintain soil structure and organic matter. By reducing soil
-                erosion, conserving moisture.
+              Escape to this secluded haven nestled in the pristine waters of the Maldives. Luxurious villa accommodations, infinity pool, diving excursions, and yacht charters await discerning travelers seeking ultimate privacy and relaxation.
               </p>
             </div>
           </a>
@@ -179,19 +167,17 @@ const Blog = () => {
             <img
               role="presentation"
               className="object-cover w-full rounded h-44 dark:bg-gray-500"
-              src="https://i.ibb.co/Df7C3RP/b7.jpg"
+              src="https://i.ibb.co/1Z1w1sS/blog8.jpg"
             />
             <div className="p-6 space-y-2">
               <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
-                The Role of Technology in Modern Agriculture
+              Exclusive Island Estate
               </h3>
               <span className="text-xs dark:text-gray-600">
                 January 26, 2021
               </span>
               <p>
-                minimize soil disturbance and maintain soil structure and
-                organic matter. By reducing soil erosion, conserving moisture,
-                and promoting soil biodiversity.
+              Experience the pinnacle of luxury living on your very own private island in the Caribbean. This exclusive estate boasts luxury villas, a private chef, tennis court, and even a private airstrip for seamless travel access.
               </p>
             </div>
           </a>
@@ -203,19 +189,17 @@ const Blog = () => {
             <img
               role="presentation"
               className="object-cover w-full rounded h-44 dark:bg-gray-500"
-              src="https://i.ibb.co/ZYBztry/b8.jpg"
+              src="https://i.ibb.co/Zx08wKm/blog9.jpg"
             />
             <div className="p-6 space-y-2">
               <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
-                Exploring Biodiversity in Agricultural Landscapes
+              Tranquil Oasis Island
               </h3>
               <span className="text-xs dark:text-gray-600">
                 January 26, 2021
               </span>
               <p>
-                Old-growth forests are invaluable ecosystems that harbor rich
-                biodiversity, sequester carbon, regulate climate, and provide
-                essential ecosystem services.
+              Escape to a tranquil oasis on your own private island in Fiji. Surrounded by crystal-clear waters and lush tropical landscapes, this exclusive retreat offers luxurious beachfront villas, gourmet dining, and personalized service.
               </p>
             </div>
           </a>
@@ -227,19 +211,17 @@ const Blog = () => {
             <img
               role="presentation"
               className="object-cover w-full rounded h-44 dark:bg-gray-500"
-              src="https://i.ibb.co/ysNG6Vd/b9.jpg"
+              src="https://i.ibb.co/TBKzDvZ/blog1.jpg"
             />
             <div className="p-6 space-y-2">
               <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">
-                The Importance of Forest Conservation
+              Remote Paradise Island
               </h3>
               <span className="text-xs dark:text-gray-600">
                 January 26, 2021
               </span>
               <p>
-                Threatened by deforestation, logging, and habitat fragmentation.
-                In this article, we will explore the importance of preserving
-                old-growth forests .
+              Discover a remote paradise on this secluded island in the Seychelles. With pristine beaches, lush rainforest, and unparalleled privacy, this exclusive retreat is perfect for intimate getaways and luxury escapes.
               </p>
             </div>
           </a>
@@ -248,6 +230,10 @@ const Blog = () => {
           <span className="loading loading-dots loading-lg"></span>
         </div>
       </div>
+      <Helmet>
+        <title>Blogs</title>
+        <link rel="canonical" href="https://www.tacobell.com/" />
+      </Helmet>
     </section>
   );
 };

@@ -1,23 +1,45 @@
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../ContextProvider/ContextProvider";
 import { useContext, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const [error, setError] = useState(null)
-  const { signUp, googleSignIn, githubSignIn } = useContext(AuthContext);
+  const { signUp, googleSignIn, githubSignIn,UpdateUser } = useContext(AuthContext);
   const handleSubmitRegister = (e) => {
     e.preventDefault();
-    // const name = e.target.name.value;
-    // const photoLnk = e.target.name2.value;
+    // e.target.reset();
+    const name = e.target.name.value;
+    const photoLnk = e.target.name2.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
     //  console.log( name, photoLnk,email,password);
+    if(password.length < 6){
+      setError('Password should be 6 charecter');
+      return
+    }const isContainsUppercase = /^(?=.*[A-Z]).*$/;
+    if (!isContainsUppercase.test(password)) {
+      setError("Password must have at least one Uppercase Character.")
+      return
+    }
+    const isContainsLowercase = /^(?=.*[a-z]).*$/;
+  if (!isContainsLowercase.test(password)) {
+    setError("Password must have at least one Lowercase Character.")
+    return
+  }
     signUp(email, password)
       .then((result) => {
         console.log(result.user);
+        UpdateUser(name, photoLnk)
+        .then(result =>{
+          console.log(result);
+        })
+        .catch(error =>{
+          console.log(error.message);
+        })
       })
       .catch((error) => {
-        setError(error.message);
+        console.log(error.message);
       });
   };
   const handleSigninWithGoogle = () => {
@@ -26,7 +48,7 @@ const Register = () => {
         console.log(result.user);
       })
       .catch((error) => {
-        setError(error.message);
+        console.log(error.message);
       });
   };
   const handleSigninWithGithub = () => {
@@ -41,6 +63,10 @@ const Register = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>Register</title>
+        <link rel="canonical" href="https://www.tacobell.com/" />
+      </Helmet>
       <div className="flex flex-col max-w-md mx-auto border-2 bg-base-200 p-6 rounded-md sm:p-10 dark:bg-gray-50 dark:text-gray-800">
         <div className="mb-8 text-center">
           <h1 className="my-3 text-4xl font-bold">Register</h1>
@@ -122,7 +148,7 @@ const Register = () => {
               >
                 Login
               </Link>
-              .
+              
             </p>
             <div className="my-6 space-y-4">
               <div className="flex justify-center space-x-4">
