@@ -36,9 +36,9 @@ const ContextProvider = ({children}) => {
         return signOut(auth)
     }
    
-    const UpdateUser = (displayName , photoURL) =>{
+    const UpdateUser = (displayName , photoURL, email) =>{
       updateProfile(auth.currentUser, {
-        displayName: displayName, photoURL: photoURL
+        displayName: displayName, photoURL: photoURL,email:email
       })
       };
     

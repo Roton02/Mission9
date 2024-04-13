@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../ContextProvider/ContextProvider";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 const Profile = () => {
     const svgs = [
@@ -12,7 +13,7 @@ const Profile = () => {
   ]
     const {user} = useContext(AuthContext)
     return (
-        <div className="mx-auto my-20 max-w-[350px] space-y-8 rounded-2xl bg-white px-6 py-8 shadow-md dark:bg-[#18181B] md:max-w-[350px]">
+        <div className="mx-auto my-5 max-w-[350px] space-y-8 rounded-2xl bg-white px-6 py-8 shadow-md dark:bg-[#18181B] md:max-w-[350px]">
         {/* profile image & bg  */}
         <Helmet>
         <title>Profile</title>
@@ -25,6 +26,7 @@ const Profile = () => {
         {/* profile name & role */}
         <div className="space-y-1 pt-8 text-center">
             <h1 className="text-xl md:text-2xl">{user.displayName}</h1>
+            <p>@{user.displayName.split('Md')}</p>
             <p className="text-lg font-bold">Owner</p>
         </div>
         {/* post , followers following  */}
@@ -35,9 +37,9 @@ const Profile = () => {
             {svgs?.map((svg, idx) => (<div key={idx} className="rounded-full shadow-[0px_2px_8px_0px_rgba(99,99,99,0.4)]  duration-300 hover:scale-150">{svg?.svg}</div>))}
         </div>
         </div>
-        <div className="flex justify-center">
-            
-        </div>
+        <Link to='/updateProfile'>
+            <button className="w-full btn mt-2 text-sm font-bold bg-slate-100 border-[#23BE0A] hover:bg-[#23BE0A] transition  text-[#23BE0A]   duration-500  hover:text-white">Edit profile</button>
+        </Link>
       </div>
     );
 };
