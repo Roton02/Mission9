@@ -11,9 +11,9 @@ const UpdateProfile = () => {
     e.preventDefault();
       const name = e.target.name.value;
       const photo = e.target.photo.value;
-      const email = e.target.email.value;
+      // const email = e.target.email.value;
       // console.log(name,photo,email);
-      UpdateUser(name, photo, email)
+      UpdateUser(name, photo)
       .then()
       .catch(error =>{
         
@@ -41,20 +41,15 @@ const UpdateProfile = () => {
           <label className="label">
             <span className="label-text">Name</span>
           </label>
-          <input type="text" name="name" placeholder="Enter your update Name" className="input input-bordered"  />
+          <input type="text" required name="name" placeholder="Enter your update Name" className="input input-bordered"  />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text">Photo URL</span>
           </label>
-          <input type="text" name="photo" placeholder="Enter Your Photo URL" className="input input-bordered" />
+          <input type="text" name="photo" required placeholder="Enter Your Photo URL" className="input input-bordered" />
         </div>
-        <div className="form-control">
-          <label className="label">
-            <span className="label-text">Email</span>
-          </label>
-          <input type="email" name="email" placeholder="Enter Your Email" className="input input-bordered" />
-        </div>
+        
         <div className="form-control mt-6">
         <button  className="w-full btn mt-2 text-sm font-bold bg-slate-100 border-[#23BE0A] hover:bg-[#23BE0A] transition  text-[#23BE0A]   duration-500  hover:text-white">Done</button>
         </div>

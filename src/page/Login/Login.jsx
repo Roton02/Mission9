@@ -2,9 +2,11 @@ import { useContext, useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../../ContextProvider/ContextProvider";
 import { Helmet } from "react-helmet-async";
+import { IoIosEye, IoIosEyeOff } from "react-icons/io";
 
 const Login = () => {
   const navigate = useNavigate();
+  const [toggle, setToggle] = useState(false)
   const { login, googleSignIn, githubSignIn } = useContext(AuthContext);
   const location = useLocation();
   console.log(location);
@@ -73,12 +75,12 @@ const Login = () => {
                 className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800"
               />
             </div>
-            <div>
+            <div className="relative">
               <label htmlFor="password" className="text-sm">
                 Password
               </label>
               <input
-                type="password"
+                type= {toggle? "text" :"password"}
                 name="password"
                 id="password"
                 placeholder="*****"
@@ -87,6 +89,7 @@ const Login = () => {
               {
                 error && <p>{error.split('/')[1].split(')')[0]}</p> 
               }
+              <span className="absolute top-10 right-4" onClick={()=> setToggle(!toggle)}>{toggle?<IoIosEye/> : <IoIosEyeOff/>}</span>
             </div>
           </div>
           <div className="space-y-2">

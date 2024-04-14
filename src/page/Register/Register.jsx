@@ -2,9 +2,12 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../ContextProvider/ContextProvider";
 import { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { IoIosEye } from "react-icons/io";
+import { IoIosEyeOff } from "react-icons/io";
 
 const Register = () => {
   const [error, setError] = useState(null)
+  const [toggle, setToggle] = useState(false)
   const { signUp, googleSignIn, githubSignIn,UpdateUser } = useContext(AuthContext);
   const handleSubmitRegister = (e) => {
     e.preventDefault();
@@ -14,6 +17,7 @@ const Register = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
     //  console.log( name, photoLnk,email,password);
+    setError(' ')
     if(password.length < 6){
       setError('Password should be 6 charecter');
       return
@@ -114,18 +118,19 @@ const Register = () => {
                 className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800"
               />
             </div>
-            <div>
+            <div className="relative">
               <label htmlFor="password" className="text-sm">
                 Password
               </label>
               <input
-                type="password"
+                type={toggle ? 'text' : "password"}
                 name="password"
                 id="password"
                 required
                 placeholder="*****"
                 className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800"
               />
+              <span className="absolute top-10 right-4" onClick={()=> setToggle(!toggle)}>{toggle?<IoIosEye/> : <IoIosEyeOff/>}</span>
             </div>
             {
               error && <p>{error}</p> 
