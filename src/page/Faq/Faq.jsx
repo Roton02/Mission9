@@ -2,13 +2,13 @@ import { Helmet } from "react-helmet-async";
 
 const Faq = () => {
     return (
-        <div className="p-5 bg-gray-100 rounded-xl">
+        <div className="">
              <Helmet>
         <title>FAQ</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
             <div  className="hero h-[200px] bg-cover text-opacity-100   bg-center my-5 rounded-xl 
-        bg-[url('https://i.ibb.co/d7nSHTS/bbbbbbb111111111.jpg')]">
+        bg-[url('https://i.ibb.co/kH9Xknx/faq4444444444.jpg')]">
           <div className="hero-content flex-col  lg:flex-row-reverse">
             
             <div className=" space-y-12  text-white flex flex-col justify-center ">

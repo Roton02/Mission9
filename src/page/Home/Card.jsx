@@ -7,7 +7,7 @@ const Card = ({CData}) => {
     return (
         <div>
             <div className="grid grid-cols-1  lg:grid-cols-5 gap-2   p-2 ">
-       <div className="col-span-3 p-4 ">
+       <div  className="col-span-3 p-4   ">
         <img className=" w-full rounded-lg  lg:min-h-[85vh]  " src={image} alt="" />
        </div>
        <div className="col-span-2 px-5 space-y-1 md:space-y-3  md:px-16 lg:px-0 mt-8">

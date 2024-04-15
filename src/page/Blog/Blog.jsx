@@ -4,7 +4,7 @@ const Blog = () => {
   return (
     <section className="dark:bg-gray-100 dark:text-gray-800">
       <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
-        <a
+        <a data-aos="zoom-in-up" data-aos-duration='1000'
           rel="noopener noreferrer"
           href="#"
           className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-50"
@@ -27,7 +27,7 @@ const Blog = () => {
           </div>
         </a>
         <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <a
+          <a data-aos="fade-right" data-aos-duration='1000'
             rel="noopener noreferrer"
             href="#"
             className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50"
@@ -49,7 +49,7 @@ const Blog = () => {
               </p>
             </div>
           </a>
-          <a
+          <a data-aos="zoom-in" data-aos-duration='1000'
             rel="noopener noreferrer"
             href="#"
             className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50"
@@ -71,7 +71,7 @@ const Blog = () => {
               </p>
             </div>
           </a>
-          <a
+          <a data-aos="fade-left" data-aos-duration='1000'
             rel="noopener noreferrer"
             href="#"
             className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50"
@@ -93,7 +93,7 @@ const Blog = () => {
               </p>
             </div>
           </a>
-          <a
+          <a data-aos="fade-right" data-aos-duration='1000'
             rel="noopener noreferrer"
             href="#"
             className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 hidden sm:block"
@@ -115,7 +115,7 @@ const Blog = () => {
               </p>
             </div>
           </a>
-          <a
+          <a data-aos="zoom-in" data-aos-duration='1000'
             rel="noopener noreferrer"
             href="#"
             className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 hidden sm:block"
@@ -137,7 +137,7 @@ const Blog = () => {
               </p>
             </div>
           </a>
-          <a
+          <a data-aos="fade-left" data-aos-duration='1000'
             rel="noopener noreferrer"
             href="#"
             className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 hidden sm:block"
@@ -159,7 +159,7 @@ const Blog = () => {
               </p>
             </div>
           </a>
-          <a
+          <a data-aos="fade-right" data-aos-duration='1000'
             rel="noopener noreferrer"
             href="#"
             className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 hidden sm:block"
@@ -181,7 +181,7 @@ const Blog = () => {
               </p>
             </div>
           </a>
-          <a
+          <a data-aos="zoom-in" data-aos-duration='1000'
             rel="noopener noreferrer"
             href="#"
             className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 hidden sm:block"
@@ -203,7 +203,7 @@ const Blog = () => {
               </p>
             </div>
           </a>
-          <a
+          <a data-aos="fade-left" data-aos-duration='1000'
             rel="noopener noreferrer"
             href="#"
             className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-50 hidden sm:block"
