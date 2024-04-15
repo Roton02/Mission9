@@ -11,6 +11,9 @@ import Register from "../page/Register/Register";
 import ErrorPage from "../page/ErrorePage/ErrorPage";
 import DetailsPage from "../page/DetailsPage/DetailsPage";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import Contract from "../page/Contract/Contract";
+import Gellary from "../page/Gellary/Gellary";
+import Faq from "../page/Faq/Faq";
 
   const router = createBrowserRouter([
     {
@@ -21,7 +24,7 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
         {
           path: '/',
           element: <Home></Home>,
-          loader: ()=> fetch('Properties.json')
+          loader: ()=> fetch('/Properties.json')
         },
         {
           path : '/profile',
@@ -48,10 +51,23 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
           element: <Register></Register>
         },
         {
-          path: '/ShowDetails',
+          path: '/ShowDetails/:id',
           element: <PrivateRoute> 
               <DetailsPage></DetailsPage>
-          </PrivateRoute> 
+          </PrivateRoute> ,
+          loader: ()=> fetch('/Properties.json')
+        },
+        {
+          path: '/contract',
+          element: <PrivateRoute><Contract></Contract></PrivateRoute>
+        },
+        {
+          path: '/gellary',
+          element: <Gellary></Gellary>
+        },
+        {
+          path : '/faq',
+          element : <Faq></Faq>
         }
       ]
     },

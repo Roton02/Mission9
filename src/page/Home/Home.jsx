@@ -12,7 +12,7 @@ const Home = () => {
     <div>
       <Carosel></Carosel>
       <div className="mt-5 md:mt-8">
-        <h1 className="text-4xl underline text-center font-bold">
+        <h1 className="text-4xl py-5 underline text-center font-bold">
           Luxury Properties
         </h1>
         <div className="  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
@@ -26,7 +26,7 @@ const Home = () => {
         <Testiomonial></Testiomonial>
       </div>
       <div className="mt-5 md:mt-8">
-        <h1 className="text-4xl my-5   text-center font-bold">Galery</h1>
+        <h1 className="text-4xl my-5   text-center underline  font-bold">Galery</h1>
         <Youtube></Youtube>
       </div>
       <Helmet>

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../ContextProvider/ContextProvider";
 import { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
@@ -6,9 +6,12 @@ import { IoIosEye } from "react-icons/io";
 import { IoIosEyeOff } from "react-icons/io";
 
 const Register = () => {
+  const location = useLocation();
+  console.log(location);
   const [error, setError] = useState(null)
   const [toggle, setToggle] = useState(false)
-  const { signUp, googleSignIn, githubSignIn,UpdateUser } = useContext(AuthContext);
+  const navigate = useNavigate()
+  const { signUp, googleSignIn, githubSignIn,UpdateUser,Logout } = useContext(AuthContext);
   const handleSubmitRegister = (e) => {
     e.preventDefault();
     // e.target.reset();
@@ -37,6 +40,8 @@ const Register = () => {
         UpdateUser(name, photoLnk)
         .then(result =>{
           console.log(result);
+          Logout()
+          navigate( "/login");
         })
         .catch(error =>{
           console.log(error.message);
@@ -50,6 +55,7 @@ const Register = () => {
     googleSignIn()
       .then((result) => {
         console.log(result.user);
+          navigate( "/");
       })
       .catch((error) => {
         console.log(error.message);
@@ -59,6 +65,7 @@ const Register = () => {
     githubSignIn()
       .then((result) => {
         console.log(result.user);
+          navigate( "/");
       })
       .catch((error) => {
         setError(error.message);

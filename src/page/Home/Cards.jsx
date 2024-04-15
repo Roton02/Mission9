@@ -1,19 +1,15 @@
 import { IoLocationSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
-import { AuthContext } from "../../ContextProvider/ContextProvider";
 const Cards = ({ data }) => {
-  const { setViewLand, user } = useContext(AuthContext);
+  // const { setViewLand } = useContext(AuthContext);
   // console.log(setViewLand);
-  const { estate_title, price, status, area, location, image } = data;
-  const handleSetViewLand = () => {
-    setViewLand(data);
-  };
+  const {id, estate_title, price, status, area, location, image } = data ;
+  
 
   return (
     <div>
       
-      <div className="card flex flex-col bg-base-100 shadow-xl transition-transform  ">
+      <div className="card flex flex-col bg-base-100 shadow-lg hover:scale-105 transition-transform  ">
         <figure className="px-8 pt-8">
           <img
             data-aos="zoom-in"
@@ -43,10 +39,10 @@ const Cards = ({ data }) => {
             </div>
           </div>
           <div className="w-full my-2 ">
-          <Link  to="/ShowDetails"
+          <Link  to={`/ShowDetails/${id}`}
             className="rounded-md   py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-[#23BE0A] hover:bg-[#23BE0A] transition  text-[#23BE0A]   duration-500  hover:text-white"
           >
-            <button onClick={handleSetViewLand} className="w-full  "><span className="absolute w-64 h-0  duration-300 origin-center rotate-45  bg-[#23BE0A] "></span>
+            <button  className="w-full  "><span className="absolute w-64 h-0  duration-300 origin-center rotate-45  bg-[#23BE0A] "></span>
             <span className="relative    ">
             View Property
             </span></button>

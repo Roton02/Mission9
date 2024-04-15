@@ -6,7 +6,7 @@ import {  updateProfile } from "firebase/auth";
 export const AuthContext = createContext(null)
 const ContextProvider = ({children}) => {
 
- const [viewLand , setViewLand] = useState(null)
+//  const [viewLand , setViewLand] = useState({})
 //  console.log(viewLand);
  const [user , setUser] =useState(null)
     const [loading, setLoading] = useState(true)
@@ -37,7 +37,7 @@ const ContextProvider = ({children}) => {
     }
    
     const UpdateUser = (displayName , photoURL, email) =>{
-      updateProfile(auth.currentUser, {
+     return updateProfile(auth.currentUser, {
         displayName: displayName, photoURL: photoURL,email:email
       })
       };
@@ -50,6 +50,7 @@ const ContextProvider = ({children}) => {
            } else{
               // console.log('logOut Successfull');
            setUser(null)
+           setLoading(false)
            }
            return ()=>{
                unsubscribe()
@@ -57,7 +58,7 @@ const ContextProvider = ({children}) => {
          });
      },[])
 
-const info = {setViewLand,viewLand,UpdateUser,  user, googleSignIn,githubSignIn, signUp,login,Logout,loading}
+const info = {UpdateUser,  user, googleSignIn,githubSignIn, signUp,login,Logout,loading}
     return (
         <AuthContext.Provider value={info}>
             {

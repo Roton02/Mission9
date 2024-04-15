@@ -9,16 +9,17 @@ const Login = () => {
   const [toggle, setToggle] = useState(false)
   const { login, googleSignIn, githubSignIn } = useContext(AuthContext);
   const location = useLocation();
-  console.log(location);
+  // console.log(location);
+
 
   // console.log(name);
   const [error , setError] = useState(null)
   const handleSubmitLogin = (e) => {
     e.preventDefault();
-    e.target.reset();
+   
     const email = e.target.email.value;
     const password = e.target.password.value;
-    //  console.log(email,password);
+     console.log(email,password);
     login(email, password)
       .then((result) => {
         console.log(result.user);
@@ -28,11 +29,13 @@ const Login = () => {
         setError(error.message)
       });
     // console.log(user);
+    e.target.reset();
   };
   const handleSigninWithGoogle = () => {
     googleSignIn()
       .then((result) => {
         console.log(result.user);
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         setError(error.message)
@@ -42,6 +45,7 @@ const Login = () => {
     githubSignIn()
       .then((result) => {
         console.log(result.user);
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         setError(error.message);

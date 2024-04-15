@@ -7,7 +7,7 @@ const Navbar = () => {
   const { Logout, user } = useContext(AuthContext);
   console.log(user);
   return (
-    <nav className="navbar  bg-base-100">
+    <nav className="navbar  w-full  bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -28,7 +28,7 @@ const Navbar = () => {
           </div>
           <div
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="menu menu-sm dropdown-content mt-3 z-[100] p-2 shadow bg-base-100 rounded-box w-52"
           >
             <NavLink
               to="/"
@@ -36,18 +36,7 @@ const Navbar = () => {
             >
               Home
             </NavLink>
-            <NavLink
-              to="/profile"
-              className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white"
-            >
-              Profile
-            </NavLink>
-            <NavLink
-              to="/updateProfile"
-              className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white"
-            >
-              Update-Profile
-            </NavLink>
+           
             {user && (
               <NavLink
                 to="/blog"
@@ -56,6 +45,18 @@ const Navbar = () => {
                 Blogs
               </NavLink>
             )}
+            <NavLink
+          to="/faq"
+          className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white "
+        >
+         FAQ
+        </NavLink>
+        <NavLink
+          to="/contract"
+          className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white "
+        >
+           Contract
+        </NavLink>
           </div>
         </div>
         <Link
@@ -73,18 +74,11 @@ const Navbar = () => {
           Home
         </NavLink>
         <NavLink
-          to="/profile"
-          className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white"
+          to="/gellary"
+          className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white "
         >
-          Profile
+          Gellary
         </NavLink>
-        <NavLink
-          to="/updateProfile"
-          className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white"
-        >
-          Update-Profile
-        </NavLink>
-
         {user && (
           <NavLink
             to="/blog"
@@ -93,39 +87,60 @@ const Navbar = () => {
             Blogs
           </NavLink>
         )}
+        
       </div>
       <div className="navbar-end ">
+      <div className="pr-14 flex space-x-3">
+        <NavLink
+          to="/faq"
+          className="btn btn-ghost border-2 hidden lg:flex border-gray-300 hover:bg-black hover:text-white "
+        >
+         FAQ
+        </NavLink>
+        <NavLink
+          to="/contract"
+          className="btn btn-ghost border-2 hidden lg:flex border-gray-300 hover:bg-black hover:text-white "
+        >
+           Contract
+        </NavLink>
+        </div>
         {user ? (
-          <div className="flex items-center justify-center ">
-            
-            <div className="flex items-center justify-center">
-              <div className="pointer group relative mb-4 h-8">
-                {/* Hover button */}
-
-                <div className="relative group ">
-                  <img
-                    className="size-[50px] bg-slate-500 object-cover rounded-full"
-                    src={
-                      user.photoURL ||
-                      "https://source.unsplash.com/300x300/?profile"
-                    }
-                    alt="avatar navigate ui"
-                  />
-                  <span className="size-4 bg-green-500 absolute rounded-full bottom-2 right-0 border-[3px] border-white"></span>
-                  <span className="size-4 bg-green-500 absolute rounded-full bottom-2 right-0 animate-ping"></span>
-                </div>
-                {/* Hover Text */}
-                <div className="absolute -left-[90px] top-0 flex cursor-pointer whitespace-nowrap opacity-0 duration-500 hover:hidden group-hover:-left-[120px] group-hover:opacity-100">
-                  <p className="h-fit rounded-md bg-[#0EA5E9] px-3 py-2 text-white shadow-[0px_0px_10px_0px_#0EA5E9]">
-                    {" "}
-                    {user.displayName || "name not found"}{" "}
-                  </p>
-                  <span className="absolute -right-2 top-[50%] h-0 w-0 -translate-y-1/2 rotate-45 border-b-[20px] border-r-[20px] border-b-transparent border-r-[#0EA5E9] shadow-[0px_0px_10px_0px_#0EA5E9]"></span>
-                </div>
+          <div className="flex items-center ">
+            <div className="dropdown dropdown-end">
+          <div tabIndex={0} role="button">
+          <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle avatar hover:tooltip tooltip-open"
+              data-tip={user ? user.displayName : "Invalid Name"}
+            >
+              <div className=" rounded-full ">
+                <img alt="" src={user.photoURL} />
               </div>
             </div>
-
-            {/* </div> */}
+          </div>
+          <ul
+            tabIndex={0}
+            className="dropdown-content z-50 menu p-2 gap-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li>
+            <NavLink
+          to="/profile"
+          className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white"
+        >
+          Profile
+        </NavLink>
+            </li>
+            <li>
+            <NavLink
+          to="/updateProfile"
+          className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white"
+        >
+          Update-Profile
+        </NavLink>
+            </li>
+          </ul>
+        </div>
             <button
               onClick={Logout}
               className="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-pink-700 text-pink-700 hover:text-white"
