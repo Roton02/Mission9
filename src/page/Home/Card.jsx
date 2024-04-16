@@ -1,17 +1,20 @@
 import { IoLocationSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
-const Card = ({CData}) => {
+const Card = ({CData,sliderImg}) => {
         console.log(CData);
         const {estate_title,segment_name,description,price,status,area,location,facilities,image} = CData ;
+        const handle =()=>{
+          sliderImg(image)
+        }
     return (
         <div>
             <div className="grid grid-cols-1  lg:grid-cols-5 gap-2   p-2 ">
        <div  className="col-span-3 p-4   ">
         <img className=" w-full rounded-lg  lg:min-h-[85vh]  " src={image} alt="" />
        </div>
-       <div className="col-span-2 px-5 space-y-1 md:space-y-3  md:px-16 lg:px-0 mt-8">
-        <h1 className="text-4xl mb-2 font-bold">  {estate_title}</h1> <hr />
+       <div data-aos="fade-left" data-aos-duration='3000' className="col-span-2 px-5 space-y-1 md:space-y-3  md:px-16 lg:px-0 mt-8">
+        <h1  className="text-4xl mb-2 font-bold">  {estate_title}</h1> <hr />
         <h1 className="text-2xl mb-2 font-medium"> Segment : {segment_name}</h1> <hr />
        
         <p className="text-xl my-1 "> <span className="text-xl font-bold  px-2">About SEG: </span>{description}</p> <hr />

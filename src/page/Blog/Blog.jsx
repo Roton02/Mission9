@@ -4,10 +4,10 @@ const Blog = () => {
   return (
     <section className="dark:bg-gray-100 dark:text-gray-800">
       <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
-        <a data-aos="zoom-in-up" data-aos-duration='1000'
-          rel="noopener noreferrer"
-          href="#"
-          className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-50"
+        <div data-aos="zoom-in-up" data-aos-duration='1000'
+          
+       
+          className="block max-w-sm mt-16 gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-50"
         >
           <img
             src="https://i.ibb.co/vL8L69Y/blog10.jpg"
@@ -25,7 +25,7 @@ const Blog = () => {
             Escape to this idyllic resort nestled along the pristine beaches of the Caribbean. Enjoy luxurious accommodations, beachfront access, infinity pool, spa treatments, and fine dining.
             </p>
           </div>
-        </a>
+        </div>
         <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <a data-aos="fade-right" data-aos-duration='1000'
             rel="noopener noreferrer"

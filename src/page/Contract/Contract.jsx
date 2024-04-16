@@ -11,7 +11,7 @@ const Contract = () => {
         bg-[url('https://i.ibb.co/d7nSHTS/bbbbbbb111111111.jpg')]">
           <div className="hero-content flex-col  lg:flex-row-reverse">
             
-            <div className=" space-y-12  text-white flex flex-col justify-center ">
+            <div data-aos="fade-bottom" data-aos-duration='1000' className=" space-y-12  text-white flex flex-col justify-center ">
               <h1 className="text-xl lg:text-4xl  font-bold">
                 Lets talk to private environment 
               </h1>
@@ -25,9 +25,9 @@ const Contract = () => {
 		<div className="py-20 md:py-0 col-span-2 rounded-l-xl text-white bg-slate-900 ">
 			<div className="p-10">
 				<p>Contact</p>
-			<h1 className="text-3xl  md:text-4xl my-8 font-bold">RELAINS-RELUX</h1>
-			<p className="pt-2 pb-4">Contact us to unlock the door to your perfect sale and rental property.</p>
-			<div className="space-y-4">
+			<h1 data-aos="zoom-in" data-aos-duration='1000' className="text-3xl  md:text-4xl my-8 font-bold">RELAINS-RELUX</h1>
+			<p data-aos="fade-right" data-aos-duration='1000' className="pt-2 pb-4">Contact us to unlock the door to your perfect sale and rental property.</p>
+			<div data-aos="fade-right" data-aos-duration='1000' className="space-y-4">
 				<p className="flex items-center">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mr-2 sm:mr-6">
 						<path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"></path>
@@ -63,7 +63,7 @@ const Contract = () => {
 				<span className="mb-1">Message</span>
 				<textarea placeholder="write message"  rows="5" className="block p-5 w-full rounded-md focus:ring focus:ring-opacity-75 "></textarea>
 			</label>
-			<button type="button" className="self-end px-8 py-3 text-lg rounded-lg bg-blue-500  text-white  hover:bg-gray-200 
+			<button data-aos="fade-left" data-aos-duration='1000' type="button" className="self-end px-8 py-3 text-lg rounded-lg bg-blue-500  text-white  hover:bg-gray-200 
 			 hover:text-black duration-300">Send message</button>
 		</form>
 	</div>

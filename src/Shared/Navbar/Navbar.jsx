@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
+import 'animate.css';
 import { useContext } from "react";
 import { AuthContext } from "../../ContextProvider/ContextProvider";
 
@@ -7,7 +8,7 @@ const Navbar = () => {
   const { Logout, user } = useContext(AuthContext);
   console.log(user);
   return (
-    <nav className="navbar  w-full  bg-base-100">
+    <nav className="navbar z-[100]  w-full  bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -38,12 +39,28 @@ const Navbar = () => {
             </NavLink>
            
             {user && (
+              <>
+                 <NavLink
+            to="/profile"
+            className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white"
+          >
+            Profile
+          </NavLink>
+              
+              <NavLink
+            to="/updateProfile"
+            className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white"
+          >
+            Update-Profile
+          </NavLink>
+            
               <NavLink
                 to="/blog"
                 className="btn btn-ghost border-2  border-gray-300 hover:bg-black hover:text-white"
               >
                 Blogs
               </NavLink>
+              </>
             )}
             <NavLink
           to="/faq"
@@ -59,9 +76,9 @@ const Navbar = () => {
         </NavLink>
           </div>
         </div>
-        <Link
+        <Link 
           to="/"
-          className="btn btn-ghost text-xl lg:text-3xl mr-0 font-bold"
+          className="btn btn-ghost text-xl lg:text-3xl mr-0 font-bold animate__animated animate__swing animate__delay-0.5s"
         >
           <span className="text-pink-700">RELAINS</span> RELUX
         </Link>
@@ -105,7 +122,7 @@ const Navbar = () => {
         </NavLink>
         </div>
         {user ? (
-          <div className="flex items-center ">
+          <div  className="flex items-center ">
             <div className="dropdown dropdown-end">
           <div tabIndex={0} role="button">
           <div
@@ -121,12 +138,12 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="dropdown-content z-50 menu p-2 gap-2 shadow bg-base-100 rounded-box w-52"
+            className="dropdown-content hidden lg:flex  z-[100] menu p-2 gap-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
             <NavLink
           to="/profile"
-          className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white"
+          className="btn btn-ghost border-2  border-gray-300 hover:bg-black hover:text-white"
         >
           Profile
         </NavLink>
@@ -134,7 +151,7 @@ const Navbar = () => {
             <li>
             <NavLink
           to="/updateProfile"
-          className="btn btn-ghost border-2 border-gray-300 hover:bg-black hover:text-white"
+          className="btn btn-ghost border-2  border-gray-300 hover:bg-black hover:text-white"
         >
           Update-Profile
         </NavLink>
@@ -152,7 +169,7 @@ const Navbar = () => {
             </button>
           </div>
         ) : (
-          <Link
+          <Link data-aos="fade-left" data-aos-duration='1000'
             to="/login"
             className="rounded-md px-3.5 py-2 m-1 overflow-hidden relative group cursor-pointer border-2 font-medium border-[#ad1199] text-[#ad1199] hover:text-white"
           >

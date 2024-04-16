@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../../ContextProvider/ContextProvider";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-
+import 'animate.css';
 
 
 const UpdateProfile = () => {
@@ -41,11 +41,11 @@ const UpdateProfile = () => {
       </Helmet>
       <div className=" bg-cover  bg-center rounded-2xl px-20
         bg-[url('https://i.ibb.co/z4nWXg7/sssssssssss2.jpg')]" >
-      <h1 className="text-2xl lg:text-4xl text-center text-white font-bold pt-10 uppercase ">Update and more attractive your profile..... </h1>
+      <h1 className=" animate__animated animate__fadeIn animate__delay-0.5s text-2xl lg:text-4xl text-center text-white font-bold pt-10 uppercase ">Update and more attractive your profile..... </h1>
        <div className="hero  min-h-screen ">
         
   <div className="hero-content mb-10  flex-col lg:flex-row-reverse">
-    <div className="text-center  lg:ml-32 lg:text-left border-2 px-5 md:px-10 lg:px-16 py-10 rounded-xl bg-opacity-60 bg-gray-500 ">
+    <div className="animate__animated animate__fadeInLeft  animate__delay-1s  text-center  lg:ml-32 lg:text-left border-2 px-5 md:px-10 lg:px-16 py-10 rounded-xl bg-opacity-60 bg-gray-500 ">
       <img className="w-40  flex justify-center items-center mx-auto rounded-3xl bg-opacity-60" src={user.photoURL} alt="" />
     
       <div className="  px-4 py-2 space-y-2">
@@ -64,7 +64,7 @@ const UpdateProfile = () => {
             
           </div>
     </div>
-    <div className="card shrink-0 w-full max-w-sm border-2 py-10 bg-opacity-60 bg-gray-500">
+    <div className="animate__animated animate__fadeInRight animate__delay-1s   card shrink-0 w-full max-w-sm border-2 py-10 bg-opacity-60 bg-gray-500">
       <form onSubmit={handleSubmit}  className="card-body">
         <div className="form-control">
           <h1 className="text-2xl flex font-bold underline text-center text-white pb-5"> Update Your personal info  </h1>

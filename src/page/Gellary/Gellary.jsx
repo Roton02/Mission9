@@ -10,11 +10,11 @@ const Gellary = () => {
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
       <div>
-        <div  className="hero h-[250px] bg-cover text-opacity-100   bg-center my-5 rounded-xl 
+        <div  className="hero h-[300px] bg-cover text-opacity-100 mt-20   bg-center my-5 rounded-xl 
         bg-[url('https://i.ibb.co/pwbQNH3/g2222222.jpg')]">
           <div className="hero-content flex-col  lg:flex-row-reverse">
             
-            <div className=" space-y-12  text-white flex flex-col justify-center ">
+            <div className=" space-y-12 mt-16  text-white flex flex-col justify-center ">
               <h1 data-aos="zoom-in-down" data-aos-duration='1000' className="text-xl lg:text-5xl  font-bold">
                 WellCome To our Owesome properties Gellary 
               </h1>
@@ -26,7 +26,7 @@ const Gellary = () => {
                   {" "}
                   <a href="#kidsBookList">See all</a>{" "}
                 </button>
-                <h1 data-aos='fade-left' data-aos-duration='1000' className=" flex items-center  text-2xl gap-2  font-bold">
+                <h1 data-aos='fade-left' data-aos-duration='1000' className=" flex items-center  lg:text-2xl  gap-2  font-bold">
                   <FaArrowLeft></FaArrowLeft> Click this and see magic !!{" "}
                 </h1>
               </div>

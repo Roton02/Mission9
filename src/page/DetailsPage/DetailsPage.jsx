@@ -2,6 +2,7 @@ import { IoLocationSharp } from "react-icons/io5";
 import { Link,useLoaderData, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Card from "../Home/Card";
+import Slider from "../Home/Slider/Slider";
 
 const DetailsPage = () => {
   const data = useLoaderData()
@@ -9,13 +10,17 @@ const DetailsPage = () => {
   console.log(data,param);
   const DetailsData = data.filter(AData => AData.id == param.id)
   // console.log(DetailsData);
+  
     return (
       <div>
         <Helmet>
         <title>Details</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
-       <div>
+      <div>
+        <Slider></Slider>
+      </div>
+       <div data-aos="zoom-in" data-aos-duration='2000'>
         {DetailsData.map(DData => <Card CData={DData} key={DData.id}></Card> )}
        </div>
       </div>

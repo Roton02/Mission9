@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../ContextProvider/ContextProvider";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import 'animate.css';
 
 const Profile = () => {
     const svgs = [
@@ -21,7 +22,7 @@ const Profile = () => {
       </Helmet>
         <div className="relative ">
             <img width={350} height={150} className="h-[150px] w-[350px] rounded-2xl bg-gray-500" src="https://source.unsplash.com/350x150/?northern lights" alt="card navigate ui" />
-            <img width={100} height={100} className="absolute -bottom-12 left-1/2 h-[100px] w-[100px] -translate-x-1/2 rounded-full border-4 border-white bg-gray-400 dark:border-[#18181B]" src={user.photoURL} alt="card navigate ui"/>
+            <img  width={100} height={100} className="absolute -bottom-12 left-1/2 h-[100px] w-[100px] -translate-x-1/2 rounded-full border-4 border-white bg-gray-400 dark:border-[#18181B] animate__animated animate__fadeIn animate__delay-1s" src={user.photoURL} alt="card navigate ui"/>
         </div>
         {/* profile name & role */}
         <div className="space-y-1 pt-8 text-center">
