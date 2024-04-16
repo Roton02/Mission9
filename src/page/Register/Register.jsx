@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { IoIosEye } from "react-icons/io";
 import { IoIosEyeOff } from "react-icons/io";
+import { toast } from "react-toastify";
 
 const Register = () => {
   const location = useLocation();
@@ -19,24 +20,32 @@ const Register = () => {
     const photoLnk = e.target.name2.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    //  console.log( name, photoLnk,email,password);
+     console.log( typeof name, photoLnk,email,password);
     setError(' ')
+    if (name.length < 0) {
+      setError('fill up name feild')
+      return
+    }
     if(password.length < 6){
       setError('Password should be 6 charecter');
+      toast.warning('Password should be 6 character')
       return
     }const isContainsUppercase = /^(?=.*[A-Z]).*$/;
     if (!isContainsUppercase.test(password)) {
       setError("Password must have at least one Uppercase Character.")
+      toast.warning('Password must have at least one Uppercase Character')
       return
     }
     const isContainsLowercase = /^(?=.*[a-z]).*$/;
   if (!isContainsLowercase.test(password)) {
     setError("Password must have at least one Lowercase Character.")
+    toast.warning('Password must have at least one Lowercase Character')
     return
   }
     signUp(email, password)
       .then((result) => {
         console.log(result.user);
+        toast.success('Create account succesfully')
         UpdateUser(name, photoLnk)
         .then(result =>{
           console.log(result);
@@ -48,13 +57,16 @@ const Register = () => {
         })
       })
       .catch((error) => {
-        console.log(error.message);
+        setError(error.message.split('(')[1]);
+        toast.warning(error.message.split('(')[1])
+        
       });
   };
   const handleSigninWithGoogle = () => {
     googleSignIn()
       .then((result) => {
         console.log(result.user);
+        toast.success('Create account  succesfully by Google ')
           navigate( "/");
       })
       .catch((error) => {
@@ -65,6 +77,7 @@ const Register = () => {
     githubSignIn()
       .then((result) => {
         console.log(result.user);
+        toast.success('Create account  succesfully by Github ')
           navigate( "/");
       })
       .catch((error) => {
@@ -93,7 +106,7 @@ const Register = () => {
                 type="text"
                 name="name"
                 id="name"
-                required
+                
                 placeholder="name"
                 className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800"
               />

@@ -2,6 +2,7 @@ import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword,
 import { createContext, useEffect, useState } from "react";
 import auth from "../Firebase.config/Firbase.config";
 import {  updateProfile } from "firebase/auth";
+import { toast } from "react-toastify";
 
 export const AuthContext = createContext(null)
 const ContextProvider = ({children}) => {
@@ -33,7 +34,9 @@ const ContextProvider = ({children}) => {
     }
     const Logout =()=>{
         // setLoading(false)
-        return signOut(auth)
+         signOut(auth)
+         toast.success(' successful Logout ')
+         return
     }
    
     const UpdateUser = (displayName , photoURL, email) =>{

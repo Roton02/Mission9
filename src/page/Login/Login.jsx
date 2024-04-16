@@ -3,6 +3,7 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../../ContextProvider/ContextProvider";
 import { Helmet } from "react-helmet-async";
 import { IoIosEye, IoIosEyeOff } from "react-icons/io";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -23,6 +24,7 @@ const Login = () => {
     login(email, password)
       .then((result) => {
         console.log(result.user);
+        toast.success(' successful Login ')
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
@@ -35,6 +37,7 @@ const Login = () => {
     googleSignIn()
       .then((result) => {
         console.log(result.user);
+        toast.success(' successful Login  by Google')
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
@@ -45,6 +48,7 @@ const Login = () => {
     githubSignIn()
       .then((result) => {
         console.log(result.user);
+        toast.success(' successful Login  by Github')
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
