@@ -29,6 +29,7 @@ const Login = () => {
       })
       .catch((error) => {
         setError(error.message)
+        toast.warning(error.message)
       });
     // console.log(user);
     e.target.reset();
@@ -42,6 +43,7 @@ const Login = () => {
       })
       .catch((error) => {
         setError(error.message)
+        toast.warning(error.message)
       });
   };
   const handleSigninWithGithub = () => {
@@ -53,6 +55,7 @@ const Login = () => {
       })
       .catch((error) => {
         setError(error.message);
+        toast.warning(error.message)
       });
   };
 
