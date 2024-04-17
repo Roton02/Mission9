@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 
 const Faq = () => {
     return (
-        <div className=" border-2 rounded-xl">
+        <div className=" overflow-x-hidden border-2 rounded-xl">
              <Helmet>
         <title>FAQ</title>
         <link rel="canonical" href="https://www.tacobell.com/" />

@@ -11,8 +11,8 @@ const Home = () => {
   const data = useLoaderData();
   // console.log(data);
   return (
-    <div>
-      <div data-aos="zoom-in" data-aos-duration='2000'>
+    <div className="overflow-x-hidden">
+      <div className="" data-aos="zoom-in" data-aos-duration='2000'>
       <Carosel></Carosel>
       {/* <Slider></Slider> */}
       </div>

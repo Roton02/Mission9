@@ -22,8 +22,9 @@ const Register = () => {
     const password = e.target.password.value;
      console.log( typeof name, photoLnk,email,password);
     setError(' ')
-    if (name.length < 0) {
-      setError('fill up name feild')
+    if (name.length <= 0 || photoLnk.length <=0 || email.length <=0 || password.length <=0) {
+      setError('Empty input not allowed')
+      toast.warning('Empty input not allowed')
       return
     }
     if(password.length < 6){
@@ -112,15 +113,15 @@ const Register = () => {
               />
             </div>
             <div>
-              <label htmlFor="name" className="block mb-2 text-sm">
+              <label htmlFor="Photo URL" className="block mb-2 text-sm">
                 Photo URL
               </label>
               <input
                 type="text"
                 name="name2"
                 id="name2"
-                required
-                placeholder="name"
+                
+                placeholder="Photo URL"
                 className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800"
               />
             </div>
@@ -133,7 +134,7 @@ const Register = () => {
                 type="email"
                 name="email"
                 id="email"
-                required
+                
                 placeholder="leroy@jenkins.com"
                 className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800"
               />
@@ -146,14 +147,14 @@ const Register = () => {
                 type={toggle ? 'text' : "password"}
                 name="password"
                 id="password"
-                required
+                
                 placeholder="*****"
                 className="w-full px-3 py-2 border rounded-md dark:border-gray-300 dark:bg-gray-50 dark:text-gray-800"
               />
               <span className="absolute top-10 right-4" onClick={()=> setToggle(!toggle)}>{toggle?<IoIosEye/> : <IoIosEyeOff/>}</span>
             </div>
             {
-              error && <p>{error}</p> 
+              error && <p className="text-red-600">{error}</p> 
             }
           </div>
           <div className="space-y-2">

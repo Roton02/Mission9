@@ -8,7 +8,7 @@ import 'animate.css';
 const UpdateProfile = () => {
   const { UpdateUser, user } = useContext(AuthContext);
   // console.log(user);
-  const { displayName , photoURL , } = user
+  const { displayName , photoURL ,email } = user
 
   const handleSubmit = e =>{
     e.preventDefault();
@@ -64,7 +64,7 @@ const UpdateProfile = () => {
             
           </div>
     </div>
-    <div className="animate__animated animate__fadeInRight animate__delay-1s   card shrink-0 w-full max-w-sm border-2 py-10 bg-opacity-60 bg-gray-500">
+    <div className="animate__animated animate__fadeInRight animate__delay-1s   card shrink-0 w-full max-w-sm border-2 py-2 bg-opacity-60 bg-gray-500">
       <form onSubmit={handleSubmit}  className="card-body">
         <div className="form-control">
           <h1 className="text-2xl flex font-bold underline text-center text-white pb-5"> Update Your personal info  </h1>
@@ -78,6 +78,12 @@ const UpdateProfile = () => {
             <span className="label-text text-white">Photo URL</span>
           </label>
           <input defaultValue={photoURL} type="text" name="photo" required placeholder="Enter Your Photo URL" className="input input-bordered" />
+        </div>
+        <div className="form-control">
+          <label className="label">
+            <span className="label-text text-white">Photo URL</span>
+          </label>
+          <input value={email} type="text" name="email"  className="input input-bordered" />
         </div>
         
         <div className="form-control mt-6">
