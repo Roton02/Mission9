@@ -1,5 +1,5 @@
 */WebSite Name : RELAINS RELUX
-*/Live Site url: 'https://jade-alpaca-9b9e57.netlify.app'
+*/Live Site url: 'https://guileless-semifreddo-1e880c.netlify.app'
 
 */features and characteristics
 * First of all, you can open an account as a user. and As a user you will get several more benefits which are given below.

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { IoLocationSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 const Cards = ({ data }) => {
@@ -54,5 +55,7 @@ const Cards = ({ data }) => {
     </div>
   );
 };
-
+Cards.propTypes={
+  data:PropTypes.object.isRequired
+}
 export default Cards;

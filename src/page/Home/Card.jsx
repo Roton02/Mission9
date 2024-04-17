@@ -1,12 +1,11 @@
+import PropTypes from 'prop-types';
 import { IoLocationSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
-const Card = ({CData,sliderImg}) => {
+const Card = ({CData}) => {
         console.log(CData);
         const {estate_title,segment_name,description,price,status,area,location,facilities,image} = CData ;
-        const handle =()=>{
-          sliderImg(image)
-        }
+        
     return (
         <div>
             <div className="grid grid-cols-1  lg:grid-cols-5 gap-2   p-2 ">
@@ -46,5 +45,10 @@ const Card = ({CData,sliderImg}) => {
         </div>
     );
 };
+
+Card.propTypes ={
+  CData:PropTypes.object.isRequired,
+ 
+}
 
 export default Card;

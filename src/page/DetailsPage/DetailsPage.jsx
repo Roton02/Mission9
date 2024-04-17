@@ -1,5 +1,5 @@
-import { IoLocationSharp } from "react-icons/io5";
-import { Link,useLoaderData, useParams } from "react-router-dom";
+
+import { useLoaderData, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Card from "../Home/Card";
 import Slider from "../Home/Slider/Slider";

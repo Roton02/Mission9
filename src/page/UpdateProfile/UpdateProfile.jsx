@@ -38,7 +38,7 @@ const UpdateProfile = () => {
 
 
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Helmet>
         <title>Update Profile</title>
         <link rel="canonical" href="https://www.tacobell.com/" />

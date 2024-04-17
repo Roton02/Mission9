@@ -21,9 +21,9 @@ import { useState } from 'react';
         </button>
     </div>
     {/* text container here */}
-    <div className="w-1/2 px-4 ml-16 left-0 absolute drop-shadow-lg text-white rounded-lg">
+    <div className="w-1/2 hidden md:flex flex-col px-4 ml-16 left-0 absolute drop-shadow-lg text-white rounded-lg">
         <h1 data-aos="fade-right" data-aos-duration='2000' className="text-3xl lg:text-5xl mb-3 font-bold">{sliders[currentSlider].title}</h1>
-        <p data-aos="zoom-in" data-aos-duration='3000' className=" sm:text-sm md:text-base text-xl lg:text-2xl">{sliders[currentSlider].des}</p>
+        <p data-aos="zoom-in" data-aos-duration='3000' className="  sm:text-sm md:text-base text-xl lg:text-2xl">{sliders[currentSlider].des}</p>
     </div>
     {/* slider container */}
     <div className="w-1/2 ml-auto overflow-hidden  absolute -right-5 lg:-right-16 z-20 px-4 py-10">

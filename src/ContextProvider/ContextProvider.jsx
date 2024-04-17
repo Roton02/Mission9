@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import auth from "../Firebase.config/Firbase.config";
@@ -70,5 +71,9 @@ const info = {UpdateUser,  user, googleSignIn,githubSignIn, signUp,login,Logout,
         </AuthContext.Provider>
     );
 };
+
+ContextProvider.propTypes={
+  children:PropTypes.node.isRequired
+}
 
 export default ContextProvider;
