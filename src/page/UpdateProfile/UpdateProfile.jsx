@@ -3,6 +3,7 @@ import { AuthContext } from "../../ContextProvider/ContextProvider";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import 'animate.css';
+import { toast } from "react-toastify";
 
 
 const UpdateProfile = () => {
@@ -17,7 +18,10 @@ const UpdateProfile = () => {
       // const email = e.target.email.value;
       // console.log(name,photo,email);
       UpdateUser(name, photo)
-      .then()
+      .then(res =>{
+        toast.success('Update your info succesfully please reload and see')
+        console.log(res);
+      })
       .catch(error =>{
         
         console.log(error);

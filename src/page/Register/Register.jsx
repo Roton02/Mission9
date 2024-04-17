@@ -176,7 +176,10 @@ const Register = () => {
               </Link>
               
             </p>
-            <div className="my-6 space-y-4">
+            
+          </div>
+        </form>
+        <div className="my-6 space-y-4">
               <div className="flex justify-center space-x-4">
                 <button
                   onClick={() => handleSigninWithGoogle()}
@@ -206,8 +209,6 @@ const Register = () => {
                 </button>
               </div>
             </div>
-          </div>
-        </form>
       </div>
     </div>
   );
