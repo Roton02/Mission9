@@ -1,5 +1,5 @@
 */WebSite Name : RELAINS RELUX
-*/Live Site url: 'https://peppy-crumble-334724.netlify.app/'
+*/Live Site url: 'https://lucent-cheesecake-db39e4.netlify.app/'
 
 */features and characteristics
 * First of all, you can open an account as a user. and As a user you will get several more benefits which are given below.
