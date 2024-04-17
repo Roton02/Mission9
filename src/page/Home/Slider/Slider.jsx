@@ -41,16 +41,16 @@ const Slider = () => {
         > 
           <SwiperSlide>
             
-            <img className='w-full h-[100vh] rounded-2xl' src="https://i.ibb.co/dPMtqdK/zzzzzzzzzzzz11.jpg"  />
+            <img className='w-full  rounded-2xl' src="https://i.ibb.co/dPMtqdK/zzzzzzzzzzzz11.jpg"  />
           </SwiperSlide>
           <SwiperSlide>
-            <img className='w-full h-[100vh] rounded-2xl' src="https://i.ibb.co/R3CF1zM/z4.jpg" />
+            <img className='w-full  rounded-2xl' src="https://i.ibb.co/R3CF1zM/z4.jpg" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className='w-full h-[100vh] rounded-2xl' src="https://i.ibb.co/HNjh2vk/zzzz.jpg" />
+            <img className='w-full  rounded-2xl' src="https://i.ibb.co/HNjh2vk/zzzz.jpg" />
           </SwiperSlide>
           <SwiperSlide>
-            <img className='w-full h-[100vh] rounded-2xl' src="https://i.ibb.co/9wjF1rG/z6.jpg" />
+            <img className='w-full rounded-2xl' src="https://i.ibb.co/9wjF1rG/z6.jpg" />
           </SwiperSlide>
         </Swiper>
       </>

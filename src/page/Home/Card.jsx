@@ -8,11 +8,11 @@ const Card = ({CData}) => {
         
     return (
         <div>
-            <div className="grid grid-cols-1  lg:grid-cols-5 gap-2   p-2 ">
-       <div  className="col-span-3 p-4   ">
-        <img className=" w-full rounded-lg  lg:min-h-[85vh]  " src={image} alt="" />
+            <div className="grid grid-cols-1 border-2 mt-2 rounded-xl overflow-y-hidden overflow-x-hidden lg:grid-cols-5 gap-2   p-2 ">
+       <div  className="col-span-3 p-4  my-auto ">
+        <img className=" w-full rounded-lg " src={image} alt="" />
        </div>
-       <div data-aos="fade-left" data-aos-duration='3000' className="col-span-2 px-5 space-y-1 md:space-y-3  md:px-16 lg:px-0 mt-8">
+       <div data-aos="fade-left" data-aos-duration='3000' className="col-span-2  space-y-1 md:space-y-3  md:px-16 py-4 mt-0">
         <h1  className="text-4xl mb-2 font-bold">  {estate_title}</h1> <hr />
         <h1 className="text-2xl mb-2 font-medium"> Segment : {segment_name}</h1> <hr />
        
@@ -27,7 +27,7 @@ const Card = ({CData}) => {
           <h1 className="text-xl">Area: {area}</h1>
           <h1 className="text-xl">Status: {status}</h1> <hr />
         </div> <hr />
-        <div className="flex gap-7 md:gap-12  my-2">
+        <div className="flex flex-col lg:flex-row gap-2 justify-between my-2">
         <h1 className="flex items-center font-semibold text-xl" >Price :{price}</h1> 
         <h1 className="flex items-center font-semibold text-xl" ><IoLocationSharp/>  {location}</h1> <hr />
         </div>

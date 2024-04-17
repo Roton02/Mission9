@@ -17,7 +17,7 @@ const DetailsPage = () => {
         <title>Details</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
-      <div>
+      <div className=""> 
         <Slider></Slider>
       </div>
        <div data-aos="zoom-in" data-aos-duration='2000'>
