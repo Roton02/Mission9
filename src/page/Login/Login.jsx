@@ -29,7 +29,7 @@ const Login = () => {
       })
       .catch((error) => {
         setError(error.message)
-        toast.warning(error.message)
+        toast.warning(error.message.split('(')[1])
       });
     // console.log(user);
     e.target.reset();

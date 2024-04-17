@@ -12,7 +12,7 @@ const ErrorPage = () => {
            <div className="max-w-md text-center">
                <p className="text-2xl font-semibold md:text-3xl">Sorry, we could not find this page.</p>
                <p className="mt-4 mb-8 dark:text-gray-600">But dont worry, you can find plenty of other things on our homepage.</p>
-               <Link to='/' className="px-8 py-3 text-white hover:bg-green-500 bg-pink-500 rounded-xl font-semibold  ">Back to homepage</Link>
+               <Link to='/' className="px-8 py-3 text-white hover:bg-gray-300 bg-orange-400 rounded-xl font-semibold  ">Back to homepage</Link>
            </div>
        </div>
    </section>
