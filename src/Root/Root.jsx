@@ -7,7 +7,7 @@ AOS.init();
 
 const Root = () => {
     return (
-        <div className="my-8 max-w-7xl px-5 mx-auto">
+        <div className="my-8 max-w-7xl px-3 mx-auto">
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>

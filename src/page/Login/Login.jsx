@@ -65,7 +65,7 @@ const Login = () => {
         <title>Login</title>
         {/* <link rel="canonical" href="https://www.tacobell.com/" /> */}
       </Helmet>
-      <div className="flex flex-col max-w-md mx-auto border-2 bg-base-200 p-6 rounded-md sm:p-10 dark:bg-gray-50 dark:text-gray-800">
+      <div className="flex flex-col max-w-md mx-auto border-2 bg-base-200 lg:my-5 p-6 rounded-md sm:p-10 dark:bg-gray-50 dark:text-gray-800">
         <div className="mb-8 text-center">
           <h1 className="my-3 text-4xl font-bold">Login</h1>
           <p className="text-sm dark:text-gray-600">

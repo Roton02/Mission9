@@ -43,7 +43,7 @@ const UpdateProfile = () => {
         <title>Update Profile</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
-      <div className=" bg-cover  bg-center rounded-2xl px-20
+      <div className=" bg-cover  bg-center rounded-2xl 
         bg-[url('https://i.ibb.co/z4nWXg7/sssssssssss2.jpg')]" >
       <h1 className=" animate__animated animate__fadeIn animate__delay-0.5s text-2xl lg:text-4xl text-center text-white font-bold pt-10 uppercase ">Update and more attractive your profile..... </h1>
        <div className="hero  min-h-screen ">
