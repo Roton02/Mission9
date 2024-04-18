@@ -1,5 +1,5 @@
 */WebSite Name : RELAINS RELUX
-*/Live Site url: 'https://6620e34f8132072b1a3bea3c--curious-jalebi-716b7f.netlify.app/'
+*/Live Site url: 'https://scintillating-sorbet-9e27a4.netlify.app/'
 
 */features and characteristics
 * First of all, you can open an account as a user. and As a user you will get several more benefits which are given below.

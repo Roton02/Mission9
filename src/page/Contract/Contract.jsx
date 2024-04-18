@@ -2,18 +2,18 @@ import { Helmet } from "react-helmet-async";
 
 const Contract = () => {
     return (
-		<div className="">
+		<div className=" overflow-x-hidden">
 	<Helmet>
         <title>Contract</title>
         <link rel="canonical" href="https://www.tacobell.com/" />
       </Helmet>
-			<div  className="hero h-[200px] bg-cover text-opacity-100   bg-center my-5 rounded-xl 
+			<div  className="hero h-[200px]  bg-cover text-opacity-100   bg-center my-5 rounded-xl 
         bg-[url('https://i.ibb.co/d7nSHTS/bbbbbbb111111111.jpg')]">
           <div className="hero-content flex-col  lg:flex-row-reverse">
             
             <div data-aos="fade-bottom" data-aos-duration='1000' className=" space-y-12  text-white flex flex-col justify-center ">
               <h1 className="text-xl lg:text-4xl  font-bold">
-                Lets talk to private environment 
+                Lets talk to private environment  habi
               </h1>
               <div className="flex justify-center gap-10 items-center ">
               </div>
